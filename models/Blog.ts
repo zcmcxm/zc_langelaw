@@ -45,8 +45,8 @@ export const validateBlogSchema = z.object({
 export interface BlogType {
   _id: string;
   title: string; // Required with max length of 128
-  created_date?: Date; // Optional, default is Date.now
-  updated_date?: Date; // Optional, default is Date.now
+  created_date: Date; // Optional, default is Date.now
+  updated_date: Date; // Optional, default is Date.now
   abstract: string; // Required with max length of 256
   content: string; // Required
   author?: string; // Optional, default is "Zhang Chi" with max length of 50

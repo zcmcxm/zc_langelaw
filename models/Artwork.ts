@@ -51,8 +51,8 @@ export const validateArtworkSchema = z.object({
 export interface ArtworkType {
   _id: string;
   title: string;
-  created_date?: Date;
-  updated_date?: Date;
+  created_date: Date;
+  updated_date: Date;
   introduction: string;
   illustration: string;
   pic_url: string;

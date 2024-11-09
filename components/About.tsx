@@ -40,7 +40,7 @@ const About = () => {
             <br />
             In my{" "}
             <Link
-              href="/blog"
+              href="/blogs"
               className="cursor-pointer transition-transform duration-300 transform text-primary hover:opacity-60"
             >
               Blog

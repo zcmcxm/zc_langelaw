@@ -56,7 +56,7 @@ const About = () => {
             other creative expressions.
             <br />
             <br />
-            I'm Zhang Chi (Helen), from{" "}
+            I&apos;m Zhang Chi (Helen), from{" "}
             <a
               href="https://www.google.com/search?q=chongqing"
               target="_blank"
@@ -65,11 +65,11 @@ const About = () => {
             >
               Chongqing
             </a>
-            , China. YES, I'm a fan of SPICY food! When I'm not indulging in my
-            love for Chinese calligraphy, you can find me diving into the deep
-            blue, practicing taekwondo, or cycling through new adventures. :)
-            Welcome to my site! Here is where I share my ideas, calligraphy, and
-            exploration.
+            , China. YES, I&apos;m a fan of SPICY food! When I&apos;m not
+            indulging in my love for Chinese calligraphy, you can find me diving
+            into the deep blue, practicing taekwondo, or cycling through new
+            adventures. :) Welcome to my site! Here is where I share my ideas,
+            calligraphy, and exploration.
           </div>
         </div>
       </div>

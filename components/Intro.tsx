@@ -39,7 +39,8 @@ const Intro = () => {
         </div>
         <div>
           <div className="text-sm sm:text-base">
-            Wondering if it's Zhang Chi or Chi Zhang? Just call me <b>Helen</b>
+            Wondering if it&apos;s Zhang Chi or Chi Zhang? Just call me{" "}
+            <b>Helen</b>
           </div>
         </div>
       </div>

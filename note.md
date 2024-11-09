@@ -16,4 +16,10 @@ Cannot Do
 ### Everything under `app` folder is server conponent (renders on server)
 
 ### Static rendering
-render at build time 
+render at build time
+
+### Logging error
+Sentry
+
+### 201 Created
+The HTTP `201 Created` success status response code indicates that the request has succeeded and has led to the creation of a resource.

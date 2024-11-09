@@ -1,4 +1,4 @@
-# Personal Website - Zhang Chi
+# Personal Website - zc_langelaw
 
 This is my personal website, deployed in November 2024. It represents a major upgrade from my [previous site](https://zcmcxm.github.io/zc.langelaw), now utilizing the Next.js framework for enhanced performance, dynamic routing, and modern server-side rendering capabilities. Additionally, it integrates fully with MongoDB for data management and Cloudinary for optimized image handling.
 

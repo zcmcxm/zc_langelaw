@@ -46,8 +46,8 @@ const config: Config = {
         },
       },
       animation: {
-        "drop-fast": "drop 0.8s ease-out",
-        "drop-slow": "drop 3s ease-out",
+        "drop-fast": "drop 1.5s ease-out",
+        "drop-slow": "drop 4s ease-out",
       },
     },
   },

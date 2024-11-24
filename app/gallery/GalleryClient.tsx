@@ -15,7 +15,7 @@ const GalleryClient: React.FC<GalleryClientProps> = ({ artworks }) => {
     <>
       <div className="w-4/5 mx-auto">
         <div className="flex flex-col gap-2 mt-16">
-          <div className="text-xl sm:text-3xl font-bold">Gallery</div>
+          <div className="text-xl sm:text-4xl font-bold">Gallery</div>
           {/* <div className="relative w-28 h-28 sm:w-36 sm:h-32">
             <Image
               src="/gallery-eng.png"
@@ -25,10 +25,10 @@ const GalleryClient: React.FC<GalleryClientProps> = ({ artworks }) => {
               className="rounded-lg"
             />
           </div> */}
-          <div className="text-sm sm:text-lg font-serif">我书意造本无法</div>
+          <div className="text-sm sm:text-xl font-serif">我书意造本无法</div>
         </div>
 
-        <div className="flex flex-wrap justify-around items-center gap-y-16 gap-x-8 my-16">
+        <div className="flex flex-wrap justify-between items-center gap-y-16 gap-x-8 my-16">
           {artworks.map((artwork) => {
             const formattedDate = formatDate(new Date(artwork.created_date));
             return (
@@ -47,11 +47,13 @@ const GalleryClient: React.FC<GalleryClientProps> = ({ artworks }) => {
                       layout="responsive"
                       className="object-contain max-w-full max-h-100 transition-transform duration-300 transform hover:opacity-90 hover:shadow-lg"
                     />
-                    <div className="flex flex-wrap gap-x-4 items-baseline text-sm sm:text-base mt-8 font-medium text-primary transition-transform duration-300 transform hover:opacity-60">
+                    <div className="flex flex-wrap gap-x-4 items-baseline text-sm sm:text-xl mt-8 font-medium text-primary transition-transform duration-300 transform hover:opacity-60">
                       {artwork.title}
-                      <p className="text-xs font-serif">{formattedDate}</p>
+                      <p className="text-xs sm:text-base font-serif">
+                        {formattedDate}
+                      </p>
                     </div>
-                    <div className="text-xxs mt-1 font-serif font-light">
+                    <div className="text-xs sm:text-base mt-1 font-serif font-light">
                       {artwork.illustration}
                     </div>
                   </Link>

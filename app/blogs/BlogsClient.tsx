@@ -14,8 +14,8 @@ const BlogsClient: React.FC<BlogsClientProps> = ({ blogs: blogs }) => {
     <>
       <div className="w-4/5 mx-auto">
         <div className="flex flex-col gap-2 mt-16">
-          <div className="text-xl sm:text-3xl font-bold">Blog</div>
-          <div className="text-sm sm:text-lg font-serif">随写随记</div>
+          <div className="text-xl sm:text-4xl font-bold">Blog</div>
+          <div className="text-sm sm:text-xl font-serif">随写随记</div>
         </div>
 
         <div className="flex flex-col items-start gap-y-8 my-16">
@@ -31,9 +31,11 @@ const BlogsClient: React.FC<BlogsClientProps> = ({ blogs: blogs }) => {
                   <Link key={blog._id} href={`/blogs/${blog._id}`}>
                     <div className="flex flex-wrap gap-x-4 items-baseline text-sm sm:text-base font-medium text-primary transition-transform duration-300 transform hover:opacity-60">
                       {blog.title}
-                      <p className="text-xs font-serif">{formattedDate}</p>
+                      <p className="text-xs sm:text-base font-serif">
+                        {formattedDate}
+                      </p>
                     </div>
-                    <div className="text-xxs mt-1 font-serif font-light">
+                    <div className="text-xs sm:text-base mt-1 font-serif font-light">
                       {blog.abstract}
                     </div>
                   </Link>

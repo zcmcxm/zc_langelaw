@@ -23,13 +23,13 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <Suspense fallback={<BlogsSkeleton />}>
-      <div className="flex flex-col gap-3 max-w-80-per mx-auto my-14 gap-y-4">
-        <div className="text-xl font-semibold">{blog.title}</div>
-        <div className="text-primary text-sm italic flex flex-wrap gap-x-3 font-serif">
+      <div className="flex flex-col gap-3 max-w-80-per mx-auto my-16 gap-y-4">
+        <div className="text-xl sm:text-2xl font-semibold">{blog.title}</div>
+        <div className="text-primary text-sm sm:text-base italic flex flex-wrap gap-x-3 font-serif mt-4">
           {blog.author}
           <p>{formattedDate}</p>
         </div>
-        <div className="text-sm mt-4">
+        <div className="text-base sm:text-lg mt-8">
           {blog.content.split("\\n").map((line, index) => (
             <React.Fragment key={index}>
               {line}

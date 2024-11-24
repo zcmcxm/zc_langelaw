@@ -9,7 +9,7 @@ export class Logo extends Component {
     return (
       <>
         <Link href="/">
-          <div className="relative w-5 h-5 sm:w-7 sm:h-7">
+          <div className="relative w-6 h-6 sm:w-7 sm:h-7">
             <Image
               src="/logo.svg"
               alt="ZC"

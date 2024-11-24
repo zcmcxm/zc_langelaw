@@ -6,10 +6,10 @@ const About = () => {
   return (
     <div
       id="About"
-      className="h-screen w-3/4 flex flex-col sm:flex-row justify-center items-center gap-x-14 gap-y-2"
+      className="h-screen w-3/4 sm:w-1/2 flex flex-col sm:flex-row justify-center items-center gap-x-20 gap-y-2"
     >
       <div className="relative">
-        <div className="flex flex-row sm:flex-col justify-center items-start gap-2 sm:gap-0">
+        <div className="flex flex-row sm:flex-col justify-center items-center gap-2 sm:gap-6">
           {/* <div className="relative w-24 h-24 sm:w-48 sm:h-36">
             <Image
               src="/about-me-chinese.jpg"
@@ -19,21 +19,30 @@ const About = () => {
               className="rounded-lg"
             />
           </div> */}
-          <div className="relative w-28 h-28 sm:w-36 sm:h-16">
+          <div className="relative w-64 h-64 sm:w-96 sm:h-120">
             <Image
-              src="/about-me-eng.png"
-              alt="About Me"
+              src="/profile-photo.jpg"
+              alt="Profile Photo"
               layout="fill"
               objectFit="contain"
-              className="rounded-lg"
+              className="rounded-none"
             />
           </div>
           {/* <div className="text-3xl sm:text-4xl font-light mb-2">张 池</div> */}
         </div>
       </div>
-      <div className="relative flex flex-col items-start sm:gap-2">
-        <div>
-          <div className="text-sm sm:text-base">
+      <div className="relative flex flex-col items-center sm:items-start sm:gap-8">
+        <div className="relative w-28 h-28 sm:w-40 sm:h-20">
+          <Image
+            src="/about-me-eng.png"
+            alt="About Me"
+            layout="fill"
+            objectFit="contain"
+            className="rounded-lg"
+          />
+        </div>
+        <div className="mx-4">
+          <div className="text-sm sm:text-xl">
             Welcome to my corner of the internet! This is where I share my
             passions, creative works, and personal discoveries.
             <br />

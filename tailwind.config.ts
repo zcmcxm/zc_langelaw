@@ -23,6 +23,9 @@ const config: Config = {
       width: {
         "80-per": "80%",
       },
+      height: {
+        "120": "32rem",
+      },
       fontSize: {
         xxs: [
           "0.65rem",
@@ -35,6 +38,16 @@ const config: Config = {
         primary: "#8076a3",
         secondary: "#f5a623",
         accent: "#50e3c2",
+      },
+      keyframes: {
+        drop: {
+          "0%": { transform: "translateY(-20%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        "drop-fast": "drop 0.8s ease-out",
+        "drop-slow": "drop 3s ease-out",
       },
     },
   },

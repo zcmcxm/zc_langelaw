@@ -43,7 +43,7 @@ export function AppHeader() {
     >
       <div className="flex justify-between items-center gap-3 px-8">
         <Logo />
-        <nav className="flex min-w-60 justify-between items-center text-sm sm:text-base">
+        <nav className="flex min-w-60 justify-between items-center text-sm sm:text-lg">
           <Link
             href="/gallery"
             className="cursor-pointer transition-transform duration-300 transform hover:opacity-60"

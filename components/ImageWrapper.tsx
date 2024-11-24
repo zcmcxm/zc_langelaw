@@ -17,8 +17,8 @@ const ImageWrapper: React.FC<ArtworkImageProps> = ({ src, alt }) => {
       <Image
         src={src}
         alt={alt}
-        width={800}
-        height={600}
+        layout="fill"
+        objectFit="contain"
         className={`${
           !loaded ? "opacity-0" : "opacity-100"
         }} max-w-md max-h-150 object-contain`}

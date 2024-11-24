@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Intro = () => {
   return (
-    <div className="h-[calc(90vh)] w-3/4 flex flex-col justify-center items-center gap-x-14 gap-y-12 sm:gap-y-16">
+    <div className="h-[90vh] w-3/4 flex flex-col justify-center items-center gap-x-14 gap-y-12 sm:gap-y-16">
       <div className="animate-drop-fast relative w-5/6 h-1/4 sm:w-5/12 sm:h-1/2">
         <Image
           src="/site-logo.png"

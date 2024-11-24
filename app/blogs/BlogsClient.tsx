@@ -18,7 +18,7 @@ const BlogsClient: React.FC<BlogsClientProps> = ({ blogs: blogs }) => {
           <div className="text-base sm:text-xl font-serif">随写随记</div>
         </div>
 
-        <div className="flex flex-col items-start gap-y-8 my-16">
+        <div className="flex flex-col items-start gap-y-10 my-16">
           {blogs.map((blog) => {
             const formattedDate = formatDate(new Date(blog.created_date));
             return (
@@ -35,7 +35,7 @@ const BlogsClient: React.FC<BlogsClientProps> = ({ blogs: blogs }) => {
                         {formattedDate}
                       </p>
                     </div>
-                    <div className="text-sm sm:text-base mt-1 font-serif font-light">
+                    <div className="text-sm sm:text-base mt-3 font-serif font-light">
                       {blog.abstract}
                     </div>
                   </Link>

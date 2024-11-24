@@ -23,16 +23,18 @@ const ArtworkPage = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <Suspense fallback={<GallerySkeleton />}>
-      <div className="flex flex-col sm:flex-row w-4/5 h-[calc(62vh)] justify-start sm:justify-center items-start gap-x-12 gap-y-8 mx-auto my-16">
-        <div className="relative w-full h-1/3 sm:w-5/12 sm:h-1/2 mx-auto">
+      <div className="flex flex-col sm:flex-row w-4/5 justify-start sm:justify-center items-start gap-x-12 gap-y-14 mx-auto mt-16 mb-28">
+        <div className="w-full sm:w-3/5 mx-auto">
           <Image
             src={artwork.pic_url}
             alt={artwork.title}
-            layout="fill"
-            objectFit="contain"
+            width={800} // Set a default width to control Image component's layout
+            height={600} // Set a default height to control Image component's layout
+            layout="responsive"
+            className="object-contain w-full sm:max-w-[40vw] max-h-[60vh]"
           />
         </div>
-        <div className="relative flex flex-col gap-6">
+        <div className="flex flex-col gap-6">
           <div className="text-lg sm:text-2xl font-semibold">
             {artwork.title}
           </div>

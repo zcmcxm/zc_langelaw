@@ -4,6 +4,7 @@ import { BlogsSkeleton } from "../BlogsClient";
 import { Suspense } from "react";
 import React from "react";
 import { formatDate } from "@/utils/date";
+import Image from "next/image";
 
 const BlogPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -30,12 +31,32 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
           <p>{formattedDate}</p>
         </div>
         <div className="text-base sm:text-lg mt-8">
-          {blog.content.split("\\n").map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}
+          {blog.content.split(/(\[img:[^\]]+\])/).map((part, index) => {
+            const imgMatch = part.match(/^\[img:(.+)\]$/);
+            if (imgMatch) {
+              return (
+                <Image
+                  key={index}
+                  src={imgMatch[1]}
+                  alt={blog.title}
+                  width={800} // Set a default width to control Image component's layout
+                  height={600} // Set a default height to control Image component's layout
+                  layout="responsive"
+                  className="object-contain w-full sm:max-w-[40vw] max-h-[60vh]"
+                />
+              );
+            }
+            return (
+              <div key={index}>
+                {part.split("\\n").map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </Suspense>

@@ -55,7 +55,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
                   const boldMatch = seg.match(/^<b>(.*?)<\/b>$/);
                   if (boldMatch) {
                     return (
-                      <span key={segIdx} className="italic font-black">
+                      <span key={segIdx} className="italic font-bold">
                         {boldMatch[1]}
                       </span>
                     );

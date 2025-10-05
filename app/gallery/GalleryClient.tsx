@@ -53,7 +53,7 @@ const GalleryClient: React.FC<GalleryClientProps> = ({ artworks }) => {
                         {formattedDate}
                       </p>
                     </div>
-                    <div className="text-sm sm:text-base mt-1 font-serif font-light">
+                    <div className="text-sm sm:text-base mt-1 font-serif font-light opacity-60 hover:opacity-40">
                       {artwork.illustration}
                     </div>
                   </Link>

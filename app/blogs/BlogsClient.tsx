@@ -35,7 +35,7 @@ const BlogsClient: React.FC<BlogsClientProps> = ({ blogs: blogs }) => {
                         {formattedDate}
                       </p>
                     </div>
-                    <div className="text-sm sm:text-base mt-3 font-serif font-light">
+                    <div className="text-sm sm:text-base mt-3 font-serif font-light opacity-60 hover:opacity-40">
                       {blog.abstract}
                     </div>
                   </Link>

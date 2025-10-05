@@ -46,14 +46,28 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
                 />
               );
             }
+            // Handle bold text: split by <b>...</b>
+            const boldRegex = /(<b>.*?<\/b>)/g;
+            const segments = part.split(boldRegex);
             return (
               <div key={index}>
-                {part.split("\\n").map((line, index) => (
-                  <React.Fragment key={index}>
-                    {line}
-                    <br />
-                  </React.Fragment>
-                ))}
+                {segments.map((seg, segIdx) => {
+                  const boldMatch = seg.match(/^<b>(.*?)<\/b>$/);
+                  if (boldMatch) {
+                    return (
+                      <span key={segIdx} className="italic font-black">
+                        {boldMatch[1]}
+                      </span>
+                    );
+                  }
+                  // Handle line breaks
+                  return seg.split("\\n").map((line, lineIdx) => (
+                    <React.Fragment key={lineIdx}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ));
+                })}
               </div>
             );
           })}
